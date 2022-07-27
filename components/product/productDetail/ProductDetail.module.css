@@ -1,0 +1,159 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 50px 0;
+}
+
+.link {
+  font-size: 14px;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 400px calc(100% - 420px);
+  column-gap: 20px;
+  align-items: flex-start;
+  height: 300px;
+  margin: 20px 0;
+}
+
+.product-img img {
+  width: 400px;
+  height: 300px;
+}
+
+.content {
+  height: 100%;
+  padding: 10px 10px 5px;
+}
+
+.brand {
+  color: #950101;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: end;
+}
+
+.make {
+  margin: 20px 0 10px;
+  font-size: 14px;
+}
+
+.shoeName {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.colorway {
+  margin: 20px 0;
+  font-size: 14px;
+  text-align: end;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 20px;
+  height: 150px;
+  overflow-y: auto;
+}
+
+.lowestResellPrice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.lowestResellPrice div {
+  font-size: 14px;
+}
+
+.resellPrices {
+  width: 100%;
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
+  padding: 20px 30px;
+  border-radius: 20px;
+  margin: 20px auto;
+  overflow-x: scroll;
+}
+
+.resellPrices table {
+  width: max-content;
+}
+
+.resellPrices thead {
+  box-shadow: 0 8px 8px -4px #eee;
+}
+
+.resellPrices .sort {
+  padding: 5px 10px 5px 5px;
+}
+
+.resellPrices th {
+  font-size: 12px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.resellPrices th.size {
+  font-size: 14px;
+}
+
+.resellPrices img {
+  width: 50px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.resellPrices td {
+  font-size: 14px;
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+.series {
+  width: 100%;
+  margin: 50px 0;
+}
+
+.series-title {
+  margin-bottom: 20px;
+}
+
+.series-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.series-item {
+  width: 170px;
+  padding: 10px;
+}
+
+.series-item img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.series-shoeName {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.series-item a {
+  color: #333;
+  text-decoration: none;
+}

@@ -1,0 +1,76 @@
+.container {
+  width: 100%;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 10px;
+}
+
+.link {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-list li {
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(166, 173, 201, 0.2);
+  padding: 10px 15px;
+  height: 230px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+
+.img {
+  width: 150px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shoeName {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.button {
+  background-color: #eee;
+  padding: 7px 15px;
+  font-size: 12px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.button a {
+  text-decoration: none;
+  color: #333;
+}
+
+.button a:hover {
+  color: #950101;
+  cursor: pointer;
+}

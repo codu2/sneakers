@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  height: 40px;
+  background-color: #eee;
+}
+
+.menu {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+}
+
+.menu-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-list li {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.menu-list li:hover {
+  color: #950101;
+}
+
+.menu-list li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-list li.active {
+  color: #950101;
+}

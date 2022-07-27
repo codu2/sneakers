@@ -1,0 +1,126 @@
+.container {
+  width: 100%;
+  height: 350px;
+  box-shadow: 0 5px 15px -5px #eee;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.list-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.product-list {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 600%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}
+
+.product {
+  list-style: none;
+  width: calc(100% / 6);
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 120px;
+  background-color: #fff;
+}
+
+.desc {
+  padding: 10px 0 50px 60px;
+}
+
+.brand {
+  font-size: 16px;
+  color: #950101;
+  width: max-content;
+  font-weight: 700;
+}
+
+.make {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 50px 0 30px;
+}
+
+.colorway {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.retailPrice,
+.lowestResellPrice {
+  font-size: 13px;
+  margin-right: 15px;
+}
+
+.lowestResellPrice::before {
+  content: "|";
+  margin-right: 15px;
+}
+
+.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 350px;
+  max-height: 250px;
+  margin: 0 auto;
+}
+
+.buttons button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  /*border: 1px solid #333;*/
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  font-size: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #950101;
+}
+
+.prev-button {
+  left: 20px;
+}
+
+.next-button {
+  right: 20px;
+}
+
+.buttons button:hover {
+  background-color: rgba(245, 245, 245, 0.7);
+}
+
+.make a {
+  text-decoration: none;
+  color: #333;
+}
