@@ -1,22 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
 
 import classes from "./ProductDetail.module.css";
-import {
-  getProductPrices,
-  resetSelected,
-  getSeries,
-} from "../../../store/actions/productAction";
+import { resetSelected } from "../../../store/actions/productAction";
 
-const ProductDetail = () => {
+const ProductDetail = ({ selected, series }) => {
   const router = useRouter();
   const productId = router.query.productId;
-  console.log(productId);
   const dispatch = useDispatch();
-  const selected = useSelector((state) => state.product.selected);
   const [sizes, setSizes] = useState([
     "7",
     "7.5",
@@ -27,19 +21,11 @@ const ProductDetail = () => {
     "10",
     "10.5",
   ]);
-  const series = useSelector((state) => state.product.series);
 
   useEffect(() => {
     return dispatch(resetSelected());
     // eslint-disable-next-line
   }, []);
-
-  useEffect(() => {
-    if (selected) {
-      dispatch(getSeries(selected.make, 12));
-    }
-    // eslint-disable-next-line
-  }, [selected]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -70,12 +56,18 @@ const ProductDetail = () => {
     <div className={classes.container}>
       {selected && (
         <div className={classes.wrapper}>
-          <div className={classes.link}>{`${selected.brand.toUpperCase()} > ${
-            selected.make
-          }`}</div>
+          <div
+            className={classes.link}
+          >{`${selected.brand} > ${selected.make}`}</div>
           <div className={classes.product}>
             <div className={classes["product-img"]}>
-              <Image src={selected.thumbnail} alt={selected.make} />
+              <Image
+                src={selected.thumbnail}
+                alt={selected.make}
+                width={400}
+                height={300}
+                layout="fill"
+              />
             </div>
             <div className={classes.content}>
               <div className={classes.brand}>{selected.brand}</div>
@@ -100,7 +92,13 @@ const ProductDetail = () => {
               <tbody>
                 <tr>
                   <td className={classes.sort}>
-                    <Image src="./images/stockx.png" alt="stockX"></Image>
+                    <Image
+                      src="/images/stockx.png"
+                      alt="stockX"
+                      width={50}
+                      height={25}
+                      layout="fill"
+                    ></Image>
                   </td>
                   {sizes.map((size, index) => (
                     <td key={index}>
@@ -114,8 +112,11 @@ const ProductDetail = () => {
                 <tr>
                   <td className={classes.sort}>
                     <Image
-                      src="./images/flightClub.png"
+                      src="/images/flightClub.png"
                       alt="flightClub"
+                      width={50}
+                      height={25}
+                      layout="fill"
                     ></Image>
                   </td>
                   {sizes.map((size, index) => (
@@ -138,7 +139,15 @@ const ProductDetail = () => {
               {series?.map((product) => (
                 <div className={classes["series-item"]} key={product._id}>
                   <Link href={`${brandName}/${product.styleID}`}>
-                    <Image src={product.thumbnail} alt={product.make} />
+                    <div className={classes["series-img"]}>
+                      <Image
+                        src={product.thumbnail}
+                        alt={product.make}
+                        width={150}
+                        height={100}
+                        layout="fill"
+                      />
+                    </div>
                     <div className={classes["series-shoeName"]}>
                       {product.shoeName.replace(selected.make, "").trim()}
                     </div>

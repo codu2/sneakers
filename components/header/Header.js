@@ -8,10 +8,12 @@ import {
   BsArchive,
 } from "react-icons/bs";
 import Menu from "./Menu";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [suitHeart, setSuitHeart] = useState(false);
   const [archive, setArchive] = useState(false);
+  const router = useRouter();
 
   return (
     <div className={classes.container}>
@@ -21,7 +23,9 @@ const Header = () => {
         <span>로그인</span>
       </div>
       <div className={classes.header}>
-        <div className={classes.logo}>SNEAKERS</div>
+        <div className={classes.logo} onClick={() => router.push("/")}>
+          SNEAKERS
+        </div>
         <div className={classes.search}>
           <BsSearch />
           <input type="text" placeholder="검색어를 입력하세요" />

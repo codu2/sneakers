@@ -21,6 +21,12 @@
   margin: 20px 0;
 }
 
+.product-img {
+  width: 400px;
+  height: 300px;
+  position: relative;
+}
+
 .product-img img {
   width: 400px;
   height: 300px;
@@ -106,6 +112,12 @@
   font-size: 14px;
 }
 
+.sort {
+  width: 50px;
+  height: 25px;
+  position: relative;
+}
+
 .resellPrices img {
   width: 50px;
   height: 25px;
@@ -142,7 +154,13 @@
   padding: 10px;
 }
 
-.series-item img {
+.series-img {
+  width: 150px;
+  height: 100px;
+  position: relative;
+}
+
+.series-img img {
   width: 150px;
   height: 100px;
   object-fit: contain;
