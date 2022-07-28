@@ -27,7 +27,7 @@ export const getProducts = (brand, quantity) => async (dispatch) => {
 
 export const getProductPrices = (styleId) => async (dispatch) => {
   const response = await axios.get(
-    `http://localhost:3000/api/adidas/${styleId}`
+    `http://localhost:3000/api/product/${styleId}`
   );
   dispatch({
     type: ActionTypes.GET_PRICES,
@@ -40,7 +40,7 @@ export const resetSelected = () => (dispatch) => {
 };
 
 export const getSeries = (make, quantity) => async (dispatch) => {
-  const response = await axios.post(`http://localhost:3000/api/${make}`, {
+  const response = await axios.post(`http://localhost:3000/api/make/${make}`, {
     quantity: quantity,
   });
   dispatch({
